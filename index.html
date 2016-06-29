@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+    
+    <style>
+        p {
+            
+        }
+        
+        
+    </style>
+    <body>
+        
+        <p>Some text</p>
+        
+        <form action="#" name="myForm">
+             <!--<lavel><input type="checkbox" checked> text</lavel>-->
+             <!---->
+             <!--<lavel><input type="checkbox" checked></lavel>-->
+             <!--<lavel><input type="checkbox" checked></lavel>-->
+             <!--<lavel><input type="checkbox" checked></lavel>-->
+             <!--<lavel><input type="checkbox" checked></lavel>-->
+             <!--<lavel><input type="checkbox" checked></lavel>-->
+             <!--<lavel><input type="checkbox" checked></lavel>-->
+             <!--<lavel><input type="checkbox" checked></lavel>-->
+             <!--<lavel><input type="checkbox" ></lavel>-->
+             <!--<lavel><input type="checkbox" ></label>-->
+             <!--<lavel><input type="checkbox" ></label>-->
+             <!--<lavel><input type="checkbox" ></label>-->
+             <!--<br/>-->
+             <!--   <button id="check">Check</button><br/>-->
+             <!--   <button id="uncheck" >  Uncheck   </button><br/>-->
+             <!---->
+                 <!--<label> <input type="radio" value="text 1" name="e"> text 1</label>-->
+                 <!--<label> <input type="radio" value="text 3" name="e"> text 2</label>-->
+                 <!--<label> <input type="radio" value="text 3" name="e"> text 3</label>-->
+             <!---->    
+             
+                <!-- <select>-->
+                <!--      <option >Пункт 1</option>-->
+                <!--      <option >Пункт 2</option>-->
+                <!--      <option >Пункт 3</option>-->
+                <!--      <option >Пункт 4</option>-->
+                <!--      <option >Пункт 5</option>-->
+                <!--</select>-->
+             <!---->
+             <lavel><input type="checkbox" name="chec">1</lavel>
+             <lavel><input type="checkbox" name="chec">2</label>
+             <lavel><input type="checkbox" name="chec">3</label>
+             <lavel><input type="checkbox" name="chec">4</label>
+             
+            
+             <button id="show"> show </button>
+             
+        </form>
+        
+        
+        <script>
+            // var df = document.forms;
+                 
+            // df.myForm.elements[0].addEventListener('click', function() {
+            //  if ( this.checked){
+            //      document.getElementsByTagName('p')[0].style.fontWeight = 'Bold'  ;
+             
+            //  } else {
+            //      document.getElementsByTagName('p')[0].style.fontWeight = 'Normal'  ;
+            //  }
+        //   });
+            ////////////////////////////////// 
+            // var  df = document.forms;
+            // document.getElementById('check').addEventListener('click',function() {
+            //     for ( var i = 0; i < df.myForm.elements.length; i++) {
+            //          df.myForm.elements[i].checked = true;
+            //     }
+            // }) ;
+            
+            // document.getElementById('uncheck').addEventListener('click',function() {
+            //     for ( var i = 0; i < df.myForm.elements.length; i++) {
+            //          df.myForm.elements[i].checked = false;
+            //     }
+            // }) ;
+            ////////////////////////////////////
+                
+            //  var df = document.forms;
+            //  for ( var i = 0 ; i < df.myForm.elements.length; i++ ) {
+            //      df.myForm.elements[i].addEventListener('click', function() {
+            //          var some =  this.value;
+            //          alert(some);
+            //      });
+            //  }
+                
+            ////////////////////////////////////
+            // var df = document.forms;
+            //     document.getElementById('show').addEventListener('click', function() {
+            //          var some = df.myForm.elements[0].value;
+            //          alert(some);
+            // });
+            ////////////////////////////////////
+            //   var df = document.forms;
+            // df.myForm.elements[0].onchange = function() {
+            //     for ( var i = 0; i< df.myForm.elements[0].length; ++i) {
+            //         if (df.myForm.elements[0].options[i].selected)
+            //              df.myForm.elements[0].options[i].innerHTML +='+';
+            //     }
+                
+            // }
+            //     document.getElementById('show').addEventListener('click', function() {
+            //          var some = df.myForm.elements[0].value;
+            //          alert(some);
+            // });
+            ////////////////////////////////////  
+            
+            var df = document.forms;
+                document.getElementById('show').onclick = function() {
+                    for ( var i = 0 ; i < df.myForm.chec.length; i++ ) {
+                        if ( df.myForm.chec[i].checked) {
+                            document.getElementById('show').innerHTML = ' show';
+                                df.myForm.chec[i].checked = false;
+                        } else {
+                            document.getElementById('show').innerHTML = ' Uncheck';
+                                df.myForm.chec[i].checked = true ;
+                        }
+                    }
+                 };
+            
+        
+        </script>
+    </body>
+</html>
